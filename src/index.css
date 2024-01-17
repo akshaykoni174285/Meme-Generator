@@ -1,0 +1,55 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+main {
+  /* padding: 30px; */
+  margin: 5rem 25rem;
+}
+
+.header{
+  display: flex;
+  gap: 10px;
+  background: rgb(103,34,128);
+background: linear-gradient(140deg, rgba(103,34,128,1) 0%, rgba(166,38,211,1) 100%);
+  justify-content: center;
+  padding: 20px 0;
+}
+.header >img{
+  width: 70px;
+}
+
+.header--title{
+  font-size: 2rem;
+  color: white;
+  font-family: 'Karla';
+}
+
+.form {
+  display: grid;
+  grid-template: 100% 100% / 1fr 1fr;
+  gap: 17px;
+}
+
+.form--label {
+  margin-bottom: 5px;
+}
+
+.form--input {
+  font-family: "Karla", sans-serif;
+  border-radius: 5px;
+  border: 1px solid #D5D4D8;
+  text-indent: 5px;
+  height: 35px;
+  width: 100%;
+}
+
+.form--button {
+  grid-column: 1 / -1;
+  font-family: "Karla", sans-serif;
+  border-radius: 5px;
+  background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+}

@@ -1,33 +1,48 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
+import MemeData from "./memeData"
 
-function Form(){
-    return(
+
+export default function Meme() {
+    const [memeImage, setMemeImage] = React.useState("")
+    /**
+     * Challenge: Save the random meme URL in state
+     * - Below the div.form, add an <img /> and set the
+     *   src to the new `memeImage` state you created
+     */
+    
+    function getMemeImage() {
+        const memesArray = MemeData.data.memes
+        const randomNumber = Math.floor(Math.random() * memesArray.length)
+        setMemeImage(memesArray[randomNumber].url)
+        
+    }
+    
+    return (
         <main>
-            <form className="form">
-                <div>
-                    <label className="form--label">Top text</label>
-                    <input
-                        type="text"
-                        placeholder="Shut up"
-                        className="form--input"
-                    />
-                </div>
-                <div>
-                    <label className="form--label">Bottom text</label>
-                    <input
-                        type="text"
-                        placeholder="and take my money"
-                        className="form--input"
-                    />
-                </div>
-                <button
+            <div className="form">
+                <input 
+                    type="text"
+                    label="hello world"
+                    placeholder="Top text"
+                    className="form--input"
+                />
+                <input 
+                    type="text"
+                    placeholder="Bottom text"
+                    className="form--input"
+                />
+                <button 
                     className="form--button"
+                    onClick={getMemeImage}
                 >
                     Get a new meme image 🖼
                 </button>
-            </form>
+            </div>
+            <div className="meme--image">
+                <img src={memeImage}/>
+            </div>
+            
         </main>
     )
 }
-
-export default Form;

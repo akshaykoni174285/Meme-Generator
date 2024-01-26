@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import FirstPage from './FirstPage'
 import Header from './Header'
-import Form from './Form'
+import MemePage from './Form'
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
   return (
     <div>
       <Header />
-      <Form />
+      <MemePage />
       
 
 
